@@ -15,7 +15,6 @@ from mpl_toolkits.mplot3d import Axes3D
 col_names = ["id", "ra", "dec", "bj","zz","zraw","bjlim","qual","bjg","bjp","bjgp","plate","field date", "eta", "ccd","ecce","orie","jon","area"]
 
 df = pd.read_table('/Users/andre/Documents/parent.ngp.txt', delim_whitespace=True, header=0, names = col_names,skiprows=1)
-#for some reason my 1st column, "id", skipped to ra and so on...just work with it.
 
 df2 = df.loc[(df['bjlim'] >= 3) & (df['bj'] <= .1)]
 
